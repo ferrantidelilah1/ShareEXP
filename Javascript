@@ -1,0 +1,496 @@
+const itemsData = [
+
+{
+id:1,
+name:"COSMOS – California State Summer School for Math & Science",
+url:"https://cosmos-ucop.ucdavis.edu/",
+description:"Four-week STEM research program at UC campuses.",
+tags:["9th","10th","11th","stem","engineering","mathematics","research","summer","in-person"]
+},
+
+{
+id:2,
+name:"Stanford Institutes of Medicine Summer Research Program",
+url:"https://simr.stanford.edu/",
+description:"Students conduct biomedical research with Stanford mentors.",
+tags:["11th","12th","biology","medicine","research","summer","in-person"]
+},
+
+{
+id:3,
+name:"Stanford Medical Youth Science Program",
+url:"https://med.stanford.edu/smysp.html",
+description:"Free summer medical science enrichment program.",
+tags:["11th","medicine","biology","research","summer","in-person"]
+},
+
+{
+id:4,
+name:"Stanford Program for Inspiring the Next Generation of Women in Physics",
+url:"https://physics.stanford.edu/",
+description:"Virtual physics mentorship and lectures.",
+tags:["9th","10th","11th","12th","physics","stem","online","summer"]
+},
+
+{
+id:5,
+name:"UCLA Summer College Immersion Program",
+url:"https://summer.ucla.edu/",
+description:"College-level classes for high school students.",
+tags:["10th","11th","12th","stem","writing","engineering","summer","in-person"]
+},
+
+{
+id:6,
+name:"UCLA Pre-College Summer Institutes",
+url:"https://summer.ucla.edu/",
+description:"Career exploration programs in STEM and arts.",
+tags:["10th","11th","12th","stem","arts","summer","in-person"]
+},
+
+{
+id:7,
+name:"UCSC Science Internship Program",
+url:"https://sip.ucsc.edu/",
+description:"Students conduct university lab research projects.",
+tags:["11th","12th","biology","research","summer","in-person"]
+},
+
+{
+id:8,
+name:"UCSB Research Mentorship Program",
+url:"https://summer.ucsb.edu/",
+description:"Mentored academic research with university faculty.",
+tags:["11th","12th","research","stem","summer","in-person"]
+},
+
+{
+id:9,
+name:"MIT Research Science Institute",
+url:"https://www.cee.org/programs/research-science-institute",
+description:"Prestigious six-week science research program.",
+tags:["11th","research","stem","summer","in-person"]
+},
+
+{
+id:10,
+name:"MITES Summer",
+url:"https://mites.mit.edu/",
+description:"STEM enrichment program for high school juniors.",
+tags:["11th","engineering","stem","summer","in-person"]
+},
+
+{
+id:11,
+name:"PROMYS Math Program",
+url:"https://promys.org/",
+description:"Intensive summer mathematics research experience.",
+tags:["10th","11th","mathematics","research","summer","in-person"]
+},
+
+{
+id:12,
+name:"SUMaC – Stanford University Mathematics Camp",
+url:"https://sumac.spcs.stanford.edu/",
+description:"Advanced math enrichment and problem solving.",
+tags:["10th","11th","mathematics","stem","summer","online"]
+},
+
+{
+id:13,
+name:"Summer Science Program",
+url:"https://summerscience.org/",
+description:"Hands-on astrophysics or biochemistry research.",
+tags:["11th","12th","research","stem","summer","in-person"]
+},
+
+{
+id:14,
+name:"NASA High School Internship Program",
+url:"https://intern.nasa.gov/",
+description:"Students assist NASA scientists and engineers.",
+tags:["10th","11th","12th","engineering","research","summer","in-person"]
+},
+
+{
+id:15,
+name:"NASA Climate Change Research Initiative",
+url:"https://climate.nasa.gov/",
+description:"Research program studying climate science.",
+tags:["11th","12th","environmental","research","summer","online"]
+},
+
+{
+id:16,
+name:"Regeneron Science Talent Search",
+url:"https://www.societyforscience.org/sts/",
+description:"Major national science research competition.",
+tags:["12th","research","contest","stem","winter"]
+},
+
+{
+id:17,
+name:"Science Olympiad",
+url:"https://www.soinc.org/",
+description:"Team STEM competition across many subjects.",
+tags:["9th","10th","11th","12th","stem","contest","spring"]
+},
+
+{
+id:18,
+name:"MathWorks Math Modeling Challenge",
+url:"https://m3challenge.siam.org/",
+description:"Teams model real-world problems with mathematics.",
+tags:["11th","12th","mathematics","contest","online","winter"]
+},
+
+{
+id:19,
+name:"Future City Engineering Competition",
+url:"https://futurecity.org/",
+description:"Design and present a futuristic city solution.",
+tags:["9th","10th","engineering","contest","winter"]
+},
+
+{
+id:20,
+name:"Math-O-Vision Contest",
+url:"https://math-o-vision.com/",
+description:"Create short films explaining math concepts.",
+tags:["9th","10th","11th","12th","mathematics","contest","online"]
+},
+
+{
+id:21,
+name:"Ocean Awareness Contest",
+url:"https://bowseat.org/",
+description:"Art and writing contest about environmental issues.",
+tags:["9th","10th","11th","12th","environmental","arts","contest","online"]
+},
+
+{
+id:22,
+name:"John Locke Essay Competition",
+url:"https://www.johnlockeinstitute.com/",
+description:"International philosophy and politics essay contest.",
+tags:["10th","11th","12th","writing","philosophy","contest","online"]
+},
+
+{
+id:23,
+name:"Scholastic Art & Writing Awards",
+url:"https://www.artandwriting.org/",
+description:"National recognition for creative work.",
+tags:["9th","10th","11th","12th","arts","writing","contest"]
+},
+
+{
+id:24,
+name:"C-SPAN StudentCam Competition",
+url:"https://www.studentcam.org/",
+description:"Create documentary videos on political topics.",
+tags:["9th","10th","11th","12th","history","writing","contest","online"]
+},
+
+{
+id:25,
+name:"National History Day",
+url:"https://www.nhd.org/",
+description:"Historical research projects and presentations.",
+tags:["9th","10th","11th","12th","history","research","contest"]
+},
+
+{
+id:26,
+name:"Technovation Girls",
+url:"https://technovationchallenge.org/",
+description:"Girls develop apps solving social problems.",
+tags:["9th","10th","11th","12th","computer","engineering","contest","online"]
+},
+
+{
+id:27,
+name:"FIRST Robotics Competition",
+url:"https://www.firstinspires.org/",
+description:"Team robotics engineering competition.",
+tags:["9th","10th","11th","12th","engineering","contest"]
+},
+
+{
+id:28,
+name:"Google Code-In (student coding competition)",
+url:"https://opensource.google/",
+description:"Coding challenges contributing to open-source.",
+tags:["9th","10th","11th","12th","computer","contest","online"]
+},
+
+{
+id:29,
+name:"CyberPatriot Cybersecurity Competition",
+url:"https://www.uscyberpatriot.org/",
+description:"Teams defend systems from cyber attacks.",
+tags:["9th","10th","11th","12th","computer","contest"]
+},
+
+{
+id:30,
+name:"AI4ALL Summer Program",
+url:"https://ai-4-all.org/",
+description:"Learn AI and ethics through projects.",
+tags:["10th","11th","computer","stem","summer","online"]
+},
+
+{
+id:31,
+name:"Girls Who Code Summer Immersion",
+url:"https://girlswhocode.com/",
+description:"Coding projects and mentorship program.",
+tags:["9th","10th","11th","computer","stem","summer","online"]
+},
+
+{
+id:32,
+name:"Kode With Klossy Coding Camp",
+url:"https://www.kodewithklossy.com/",
+description:"Free coding bootcamp for girls.",
+tags:["9th","10th","11th","computer","stem","summer"]
+},
+
+{
+id:33,
+name:"LaunchX Entrepreneurship Program",
+url:"https://www.launchx.com/",
+description:"Students launch real startup projects.",
+tags:["10th","11th","12th","business","internships","summer"]
+},
+
+{
+id:34,
+name:"Civics Unplugged Fellowship",
+url:"https://civicsunplugged.org/",
+description:"Youth civic leadership and activism training.",
+tags:["10th","11th","12th","activism","service","online"]
+},
+
+{
+id:35,
+name:"Global Youth Institute",
+url:"https://www.worldfoodprize.org/",
+description:"Research global food security issues.",
+tags:["9th","10th","11th","12th","research","environmental"]
+},
+
+{
+id:36,
+name:"Junior State of America Summer School",
+url:"https://jsa.org/",
+description:"Debate and leadership summer academy.",
+tags:["9th","10th","11th","12th","law","activism","summer"]
+},
+
+{
+id:37,
+name:"Model United Nations",
+url:"https://bestdelegate.com/",
+description:"Simulate UN diplomacy and policy debates.",
+tags:["9th","10th","11th","12th","law","history","contest"]
+},
+
+{
+id:38,
+name:"High School Academic Research Competition",
+url:"https://www.researchcomp.org/",
+description:"Students present academic research papers.",
+tags:["9th","10th","11th","12th","research","contest","online"]
+},
+
+{
+id:39,
+name:"Breakthrough Junior Challenge",
+url:"https://breakthroughjuniorchallenge.org/",
+description:"Explain scientific concepts in creative videos.",
+tags:["9th","10th","11th","12th","physics","contest","online"]
+},
+
+{
+id:40,
+name:"Conrad Challenge",
+url:"https://www.conradchallenge.org/",
+description:"Innovation competition solving global problems.",
+tags:["9th","10th","11th","12th","engineering","contest"]
+},
+
+{
+id:41,
+name:"Youth Service America Grants",
+url:"https://ysa.org/",
+description:"Funding for youth community service projects.",
+tags:["9th","10th","11th","12th","service","activism"]
+},
+
+{
+id:42,
+name:"Red Cross Youth Volunteer Program",
+url:"https://www.redcross.org/",
+description:"Volunteer in community disaster relief.",
+tags:["9th","10th","11th","12th","service"]
+},
+
+{
+id:43,
+name:"Teen CERT Emergency Response Training",
+url:"https://www.ready.gov/cert",
+description:"Learn disaster response skills.",
+tags:["9th","10th","11th","12th","service"]
+},
+
+{
+id:44,
+name:"NASA App Development Challenge",
+url:"https://www.nasa.gov/",
+description:"Students create space-related software apps.",
+tags:["9th","10th","11th","12th","computer","contest"]
+},
+
+{
+id:45,
+name:"Future Business Leaders of America",
+url:"https://www.fbla.org/",
+description:"Business competitions and leadership events.",
+tags:["9th","10th","11th","12th","business","contest"]
+},
+
+{
+id:46,
+name:"DECA Business Competition",
+url:"https://www.deca.org/",
+description:"Marketing and entrepreneurship competitions.",
+tags:["9th","10th","11th","12th","business","contest"]
+},
+
+{
+id:47,
+name:"YoungArts Competition",
+url:"https://youngarts.org/",
+description:"National competition for creative arts.",
+tags:["10th","11th","12th","arts","contest"]
+},
+
+{
+id:48,
+name:"National Geographic Slingshot Challenge",
+url:"https://www.nationalgeographic.org/",
+description:"Youth projects solving environmental issues.",
+tags:["9th","10th","11th","12th","environmental","contest"]
+},
+
+{
+id:49,
+name:"StudentCam Documentary Competition",
+url:"https://www.studentcam.org/",
+description:"Create documentaries about public policy.",
+tags:["9th","10th","11th","12th","history","contest","online"]
+},
+
+{
+id:50,
+name:"International BioGENEius Challenge",
+url:"https://biogeneius.org/",
+description:"Biotechnology research competition.",
+tags:["11th","12th","biology","research","contest"]
+}
+
+];
+
+const itemContainer = document.getElementById('item-container');
+const applyFiltersBtn = document.getElementById('apply-filters');
+const clearFiltersBtn = document.getElementById('clear-filters');
+const filterGroups = document.querySelectorAll('.filter-group');
+
+// Toggles visibility of the dropdown menus
+filterGroups.forEach(group => {
+  const toggle = group.querySelector('.dropdown-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      group.classList.toggle('active');
+    });
+  }
+});
+function renderItems(itemsToRender) {
+  itemContainer.innerHTML = '';
+
+  itemsToRender.forEach(item => {
+
+    const link = document.createElement('a');
+    link.href = item.url;
+    link.target = "_blank";
+    link.classList.add('item');
+
+    // Title
+    const title = document.createElement('h3');
+    title.textContent = item.name;
+
+    // Description
+    const desc = document.createElement('p');
+    desc.textContent = item.description;
+    desc.classList.add('description');
+
+    // Add to card
+    link.appendChild(title);
+    link.appendChild(desc);
+
+    itemContainer.appendChild(link);
+  });
+}
+function applyFilters() {
+  const filtersByCategory = {};
+  // FIXED: Selector must be on a single line
+  const checkedBoxes = document.querySelectorAll('.dropdown-menu input[type="checkbox"]:checked');
+  
+  checkedBoxes.forEach(cb => {
+    const group = cb.closest('.filter-group');
+    const category = group.querySelector('.dropdown-toggle').getAttribute('data-category');
+    const value = cb.value;
+
+    if (!filtersByCategory[category]) {
+      filtersByCategory[category] = [];
+    }
+    filtersByCategory[category].push(value);
+  });
+
+  const activeCategories = Object.keys(filtersByCategory);
+
+  if (activeCategories.length === 0) {
+    renderItems(itemsData);
+    return;
+  }
+
+  const filteredItems = itemsData.filter(item => {
+    // "AND" logic between categories: Item must match every active category
+    return activeCategories.every(category => {
+      const selectedTagsInThisCat = filtersByCategory[category];
+      // "OR" logic within a category: Item must match at least one tag in this category
+      return selectedTagsInThisCat.some(tag => item.tags.includes(tag));
+    });
+  });
+
+  renderItems(filteredItems);
+}
+
+function clearFilters() {
+  // FIXED: Selector must be on a single line
+  const checkedBoxes = document.querySelectorAll('.dropdown-menu input[type="checkbox"]:checked');
+  checkedBoxes.forEach(cb => {
+    cb.checked = false;
+  });
+  renderItems(itemsData);
+}
+
+// Add event listeners
+if (applyFiltersBtn) applyFiltersBtn.addEventListener('click', applyFilters);
+if (clearFiltersBtn) clearFiltersBtn.addEventListener('click', clearFilters);
+
+// Initial render
+renderItems(itemsData);
+
+

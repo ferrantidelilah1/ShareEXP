@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="style.css">
+
+<div class="container">
+<aside class="sidebar">
+<h3>Your Preferences?</h3>
+<!-- Category 1 Dropdown -->
+<div class="filter-group">
+<button class="dropdown-toggle" data-category="grade">Grade ▼</button>
+<div class="dropdown-menu">
+<label><input type="checkbox" value="9th"> 9th</label>
+<label><input type="checkbox" value="10th"> 10th</label>
+<label><input type="checkbox" value="11th"> 11th</label>
+<label><input type="checkbox" value="12th"> 12th</label>
+</div>
+</div>
+
+<!-- Category 2 Dropdown -->
+<div class="filter-group">
+<button class="dropdown-toggle" data-category="subjects">Subjects ▼</button>
+<div class="dropdown-menu">
+<button class="dropdown-toggle"
+data-category="stem">STEM</button>
+<div class="dropdown-menu">
+<label><input type="checkbox"
+value="mathematics">Mathematics</label>
+<label><input type="checkbox" value="biology">Biology</label>
+<label><input type="checkbox" value="chemistry">Chemistry</label>
+<label><input type="checkbox" value="medicine">Medicine</label>
+<label><input type="checkbox" value="environmental">Environmental
+Science</label>
+<label><input type="checkbox"
+value="computer">Computer Science</label>
+<label><input type="checkbox"
+value="engineering">Engineering</label>
+<button class="dropdown-toggle"
+data-category="humanities">Humanities</button>
+<div class="dropdown-menu">
+<label><input type="checkbox"
+value="writing">Writing</label>
+<label><input type="checkbox"
+value="law">Law</label>
+<label><input type="checkbox"
+value="psychology">Psychology</label>
+<label><input type="checkbox"
+value="history">History</label>
+<label><input type="checkbox"
+value="philosophy">Philosophy</label>
+<button class="dropdown-toggle"
+data-category="arts">Arts</button>
+<div class="dropdown-menu">
+<label><input type="checkbox"
+value="visual art">Visual Art</label>
+<label><input type="checkbox"
+value="music">Music</label>
+<label><input type="checkbox"
+value="theater">Theater</label>
+<label><input type="checkbox"
+value="dance">Dance</label>
+<label><input type="checkbox"
+value="art history">Art History</label>
+<button class="dropdown-toggle"
+data-category="community">Community</button>
+<div class="dropdown-menu">
+<label><input type="checkbox"
+value="activism">Activism</label>
+<label><input type="checkbox"
+value="service">Service</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="filter-group">
+<button class="dropdown-toggle">
+<data-category="type of opportunity">Type of Opportunity ▼</button>
+<div class="dropdown-menu">
+<label><input type="checkbox"
+value="work experience">Work Experience</label>
+<label><input type="checkbox"
+value="volunteering">Volunteering</label>
+<label><input type="checkbox"
+value="internships">Internships</label>
+<label><input type="checkbox"
+value="research">Research</label>
+<label><input type="checkbox"
+value="contest">Contest</label>
+</div>
+</div>
+
+<div class="filter-group">
+<button class="dropdown-toggle">
+<data-category="time commitment">Time Commitment ▼</button>
+<div class="dropdown-menu">
+<label><input type="checkbox"
+value="online">Online</label>
+<label><input type="checkbox"
+value="hybrid">Hybrid</label>
+<label><input type="checkbox"
+value="in-person">In-Person</label>
+
+</div>
+</div>
+
+<div class="filter-group">
+<button class="dropdown-toggle">
+<data-category="time of year">Time of Year ▼</button>
+<div class="dropdown-menu">
+<label><input type="checkbox"
+value="spring">Spring</label>
+<label><input type="checkbox"
+value="summer">Summer</label>
+<label><input type="checkbox"
+value="fall">Fall</label>
+<label><input type="checkbox"
+value="winter">Winter</label>
+<label><input type="checkbox"
+value="year-long">Year-Long</label>
+</div>
+</div>
+<button id="apply-filters">Apply Filters</button>
+<button id="clear-filters">Clear Filters</button>
+</aside>
+
+<main class="content">
+<h2>Your Opportunities!</h2>
+<div id="item-container">
+<!-- Items inserted here -->
+</div>
+</main>
+</div>
+<script src="script.js"></script>
